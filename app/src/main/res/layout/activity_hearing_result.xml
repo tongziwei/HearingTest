@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HearingResultActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/in_head_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_left_res"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左耳"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_right_res"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="右耳"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_horizontal"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="听力障碍程度"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tv_left_ear_rank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正常"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/tv_right_ear_rank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正常"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分析与建议"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/tv_left_ear_analysis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正常"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/tv_right_ear_analysis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="正常"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee">
+        <Button
+            android:id="@+id/btn_restart_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新测试"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/btn_bg_shape"/>
+
+        <Button
+            android:id="@+id/btn_enter_self_adaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入听力补偿自调试"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/btn_bg_shape"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.NoiseCheckFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="听力测试需要在安静的环境中进行"
+        android:gravity="center"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:id="@+id/iv_quiet"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/hearing_test_quiet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_environment_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/iv_quiet">
+        <TextView
+            android:id="@+id/tv_hint2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/check_env">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_noise_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="噪声测试"
+            android:layout_below="@+id/tv_hint2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:textColor="@color/green"
+            android:background="@drawable/btn_bg_shape_green"/>
+
+        <LinearLayout
+            android:id="@+id/ll_chart_view"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/btn_noise_test"
+            android:layout_margin="10dp"
+            android:background="#ffffff">
+        </LinearLayout>
+
+        <LinearLayout
+         android:id="@+id/ll_noise_value"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_below="@+id/ll_chart_view"
+         android:layout_marginTop="10dp">
+
+         <TextView
+             android:id="@+id/tv_max_value"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="最高分贝:\n "
+             android:textSize="17sp" />
+
+         <TextView
+             android:id="@+id/tv_avg_value"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="平均分贝:\n"
+             android:textSize="17sp" />
+
+         <TextView
+             android:id="@+id/tv_min_value"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="最低分贝:\n"
+             android:textSize="17sp" />
+     </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_bg_shape"/>
+
+</RelativeLayout>

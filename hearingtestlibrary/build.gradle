@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+/*    task makeJar(type: Copy) {
+//删除存在的jar
+        delete "build/libs/hearingtestSDK.jar"
+//设置拷贝文件
+        from("build/intermediates/bundles/release")
+//打进jar后文件目录
+        into("build/libs/")
+//将classes.jar放入build/libs目录下
+//include,exclude参数来设置过滤
+        include("classes.jar")
+//重命名为yxSDK.jar
+        rename("classes.jar", "hearingtestSDK.jar")
+    }
+    makeJar.dependsOn(build)*/
+    def _BASENAME = "HearingTestLibrary";
+    def _VERSION = "_V1.0";
+    def _DestinationPath = "build"; //生成jar包的位置
+    def zipFile = file('build/intermediates/aar_main_jar/release/classes.jar'); //待打包文件位置
+
+ /*   task deleteBuild(type:Delete){
+        delete _DestinationPath + _BASENAME + _VERSION + ".jar"
+    }*/
+
+    task makeJar(type:Copy){
+        //from zipTree(zipFile)
+        from fileTree(dir:'src/main',includes:['assets/**']) //将assets目录打入jar包
+        //删除存在的jar
+        delete "build/outputs/HearingTestLibrary_V1.0.jar"
+//设置拷贝文件
+        from("build/intermediates/aar_main_jar/release")
+        into("build/outputs/")
+//将classes.jar放入build/libs目录下
+//include,exclude参数来设置过滤
+        include("classes.jar")
+//重命名为yxSDK.jar
+        rename("classes.jar", _BASENAME + _VERSION + ".jar")
+    }
+
+    makeJar.dependsOn(build)
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

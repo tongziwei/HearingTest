@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HearingTestActivity">
+
+    <include layout="@layout/in_head_normal" />
+
+    <ImageView
+        android:id="@+id/iv_earphone"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/left_earphone"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_frequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_earphone"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btn_back_front_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回前一步"
+        android:textSize="17sp"
+        android:textColor="#99EE99"
+        android:layout_below="@+id/rv_frequency"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_hearing_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="听到嘀声时立刻按下"
+        android:textSize="19sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/btn_back_front_step"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_bg_selector"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_start_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始听力测试"
+        android:textSize="19sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/btn_hearing_yes"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_bg_shape" />
+
+
+
+</RelativeLayout>

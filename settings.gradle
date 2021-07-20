@@ -1,0 +1,3 @@
+include ':hearingtestlibrary'
+include ':app'
+rootProject.name = "HearingTest"

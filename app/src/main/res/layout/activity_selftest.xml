@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelfTestActivity">
+
+    <include layout="@layout/in_head_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_device_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#eeeeee"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/check_device_des1">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_dev_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设备测试"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_shape"/>
+
+
+                    <Button
+                        android:id="@+id/btn_stop_dev_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="停止测试"
+                        android:layout_marginStart="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_bg_shape"/>
+
+                    <EditText
+                        android:id="@+id/et_db"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="分贝"
+                        android:inputType="number" />
+                    <EditText
+                        android:id="@+id/et_fz"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:hint="频率"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_environment_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#eeeeee">
+                <TextView
+                    android:id="@+id/tv_hint2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/check_env">
+                </TextView>
+
+                <Button
+                    android:id="@+id/btn_noise_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="噪声测试"
+                    android:layout_below="@+id/tv_hint2"
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_bg_shape"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_noise_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#eeeeee"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/btn_noise_test"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_max_value"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="最高分贝:\n 90 dB"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_avg_value"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="平均分贝:\n 65 dB"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_min_value"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="最低分贝:\n 40 dB"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_chart_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/ll_noise_value"
+                    android:layout_margin="10dp"
+                    android:background="#ffffff">
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_db_explain"
+                    android:layout_below="@+id/ll_chart_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_enter_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="进入听力测试"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg_shape"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

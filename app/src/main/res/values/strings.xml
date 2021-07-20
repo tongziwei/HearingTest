@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">HearingTest</string>
+    <string name="check_device_des1">请带上耳机，点击“设备测试”按钮，检测当前耳机是否可用。</string>
+
+    <string name="check_env">请点击“噪声测试”按钮，检测当前环境是否适合听力检测。</string>
+
+    <string name="title_alert">提示</string>
+    <string name="show_ok">确定</string>
+    <string name="show_cancel">取消</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 听力等级 -->
+    <string-array name="db_explain_arr">
+        <item>  0dB：人类可听见的最小声音。</item>
+        <item> 10dB：正常呼吸，风吹落叶沙沙声。</item>
+        <item> 20dB：1米内窃窃私语，乡村的夜晚。</item>
+        <item> 30dB：安静的图书馆、轻声细谈</item>
+        <item> 40dB：安静的办公室、远离路况的卧室。</item>
+        <item> 50dB：近距离的轻微路况、冰箱、微风</item>
+        <item> 60dB：室内大声说话、老师讲课声。</item>
+        <item> 70dB：繁忙的交通、吵闹的餐厅。</item>
+        <item> 80dB：繁忙的街道，闹钟铃声，工厂吵杂声</item>
+        <item> 90dB：嘈杂的酒吧、铲车、雪地摩托车声。</item>
+        <item>100dB：拖拉机启动、气压钻机声。</item>
+        <item>110dB：摇滚音乐，小孩的哭声</item>
+        <item>120dB：刺耳声音的低限，雷声</item>
+        <item>130dB：30 米内的喷气式发动机声</item>
+        <item>180dB：航天飞机发射</item>
+    </string-array>
+    <!-- 分析与建议 -->
+    <string-array name="hearing_rank_arr">
+        <item>正常</item>
+        <item>轻度</item>
+        <item>中度</item>
+        <item>中重度</item>
+        <item>重度</item>
+        <item>极重度</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="propose_arr">
+        <item>正常听力，继续保持。</item>
+        <item>您在嘈杂的环境下，听小声不是特别好，但是日常交流不存在问题。不要过度担心，不要长时间暴露在噪声环境和长时间戴耳机。</item>
+        <item>您在日常交流不存在问题，但是您在远距离的交流与嘈杂环境中的交流尚不理想。建议到医院做一个详细进一步的检查。</item>
+        <item>您在日常交流不存在问题，但是您在远距离的交流与嘈杂环境中的交流尚不理想。建议到医院做一个详细进一步的检查。</item>
+        <item>您在一对一的交流还是可以进行的，但是在日常交流有些困难，需要说话者提高音量讲话，所以会影响你的生活质量。建议您到医院做进一步的检查或者到助听器店做一个咨询。</item>
+        <item>您很少参与日常生活交流，您觉得别人讲话声音不响。您现在的听力损失严重影响您的生活质量，需要尽快到医院做进一步的检查或者到助听器店做一个咨询。</item>
+    </string-array>
+</resources>
